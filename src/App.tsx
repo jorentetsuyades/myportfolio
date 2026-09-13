@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import profileImage from './assets/profile.jfif'
 import {
   ArrowUpRight,
   BrainCircuit,
@@ -86,7 +87,7 @@ function App() {
           {navItems.map((item) => <button key={item.id} className={activeSection === item.id ? 'nav-link active' : 'nav-link'} onClick={() => scrollTo(item.id)}>{item.label}</button>)}
         </nav>
         <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? 'Close menu' : 'Open menu'}>{menuOpen ? <X size={20} /> : <Menu size={20} />}</button>
-        <a className="header-contact" href="mailto:francejoren@example.com">Let&apos;s talk <ArrowUpRight size={15} /></a>
+        <a className="header-contact" href="mailto:france.j.custodio@gmail.com">Let&apos;s talk <ArrowUpRight size={15} /></a>
       </header>
 
       <main>
@@ -100,11 +101,11 @@ function App() {
               <button className="button button-primary" onClick={() => scrollTo('projects')}>View projects <ArrowUpRight size={17} /></button>
               <button className="button button-quiet" onClick={() => scrollTo('experience')}>View experience <ChevronRight size={16} /></button>
             </div>
-            <div className="hero-links"><a href="https://github.com" target="_blank" rel="noreferrer"><Code2 size={16} /> GitHub</a><a href="https://linkedin.com" target="_blank" rel="noreferrer"><Network size={16} /> LinkedIn</a><a href="mailto:francejoren@example.com"><Mail size={16} /> Email</a></div>
+            <div className="hero-links"><a href="https://github.com/jorentetsuyades" target="_blank" rel="noreferrer"><Code2 size={16} /> GitHub</a><a href="https://www.linkedin.com/in/france-joren-custodio-700166363/" target="_blank" rel="noreferrer"><Network size={16} /> LinkedIn</a><a href="mailto:france.j.custodio@gmail.com"><Mail size={16} /> Email</a></div>
           </div>
           <div className="hero-aside reveal reveal-delay">
             <div className="coordinate">14° 35&apos; N<br />120° 59&apos; E</div>
-            <div className="hero-portrait"><div className="portrait-grid" /><div className="portrait-initials">FJ<span>.</span></div><div className="portrait-caption">FRANCE JOREN<br />CUSTODIO</div></div>
+            <div className="hero-portrait"><img className="portrait-image" src={profileImage} alt="France Joren Custodio" /><div className="portrait-grid" /><div className="portrait-caption">FRANCE JOREN<br />CUSTODIO</div></div>
             <div className="hero-note"><span>01</span><p>From a clear problem<br />to a reliable system.</p></div>
           </div>
           <div className="scroll-cue"><span>Scroll to explore</span><span className="scroll-line" /></div>
@@ -133,7 +134,7 @@ function App() {
 
         <section className="principles section-pad section-light"><div className="section-heading heading-row"><div><span className="section-index">05 / HOW I BUILD</span><h2>Good engineering<br /><span>is a practice.</span></h2></div><p>My approach stays grounded in clarity, useful constraints, and a healthy respect for the people who use what we ship.</p></div><div className="principles-grid">{principles.map(([title, copy], index) => <div className="principle" key={title}><span>0{index + 1}</span><h3>{title}</h3><p>{copy}</p></div>)}</div></section>
 
-        <section id="contact" className="contact-section section-pad"><div className="contact-top"><span className="section-index">06 / CONTACT</span><span className="contact-availability"><span className="status-dot" /> Open to conversations</span></div><h2>Let&apos;s build<br /><em>something thoughtful.</em></h2><p>I&apos;m interested in opportunities involving software engineering, AI engineering, Generative AI, cloud applications, and intelligent systems.</p><a className="button button-primary contact-button" href="mailto:francejoren@example.com">Get in touch <ArrowUpRight size={17} /></a><div className="contact-links"><a href="mailto:francejoren@example.com"><Mail size={17} /> francejoren@example.com</a><a href="https://linkedin.com" target="_blank" rel="noreferrer"><Network size={17} /> LinkedIn</a><a href="https://github.com" target="_blank" rel="noreferrer"><Code2 size={17} /> GitHub</a></div><div className="footer-line"><span>FRANCE JOREN CUSTODIO</span><span>SOFTWARE ENGINEER / AI ENGINEER</span><span>© 2025</span></div></section>
+        <section id="contact" className="contact-section section-pad"><div className="contact-top"><span className="section-index">06 / CONTACT</span><span className="contact-availability"><span className="status-dot" /> Open to conversations</span></div><h2>Let&apos;s build<br /><em>something thoughtful.</em></h2><p>I&apos;m interested in opportunities involving software engineering, AI engineering, Generative AI, cloud applications, and intelligent systems.</p><a className="button button-primary contact-button" href="mailto:france.j.custodio@gmail.com">Get in touch <ArrowUpRight size={17} /></a><div className="contact-links"><a href="mailto:france.j.custodio@gmail.com"><Mail size={17} /> france.j.custodio@gmail.com</a><a href="https://www.linkedin.com/in/france-joren-custodio-700166363/" target="_blank" rel="noreferrer"><Network size={17} /> LinkedIn</a><a href="https://github.com/jorentetsuyades" target="_blank" rel="noreferrer"><Code2 size={17} /> GitHub</a></div><div className="footer-line"><span>FRANCE JOREN CUSTODIO</span><span>SOFTWARE ENGINEER / AI ENGINEER</span><span>© 2025</span></div></section>
       </main>
     </div>
   )
